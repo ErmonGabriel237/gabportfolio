@@ -42,9 +42,9 @@ const GridBackground = () => {
 
 export default function Hero() {
   const words = [
-    "Full-Stack Developer & UI/UX Enthusiast",
+    "Full-Stack Developer & UgitgitI/UX Enthusiast",
     "JavaScript Developer & Content Creator",
-    "Learning MERN Stack",
+    // "Learning MERN Stack",
     "Linux & GitHub for DevOps Enthusiast",
   ];
 
