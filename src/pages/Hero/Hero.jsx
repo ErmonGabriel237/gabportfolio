@@ -44,7 +44,7 @@ export default function Hero() {
   const words = [
     "Full-Stack Developer & UgitgitI/UX Enthusiast",
     "JavaScript Developer & Content Creator",
-    "Learning MERN Stack and Mobile Development technologies",
+    "Learning MERN Stack and Mobile Development",
     "Linux & GitHub for DevOps Enthusiast",
   ];
 
