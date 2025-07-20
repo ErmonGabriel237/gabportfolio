@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Analytics } from "@vercel/analytics/react"
+import { inject } from '@vercel/analytics';
+ 
 import "./assets/css/index.css";
 import Experience from "./pages/Experience/Experience";
 import Contact from "./pages/Contact/Contact";
@@ -13,6 +14,7 @@ import { Route, Routes } from "react-router-dom";
 
 export default function App() {
   const [isOnePage, setIsOnePage] = useState(false); // Toggle state
+  inject();
 
   return (
     <>
