@@ -1,5 +1,5 @@
 import React from "react";
-import { Code2, Activity, Cpu, Layers, Network, Binary } from "lucide-react";
+import { Code2, Activity, Cpu, Layers, Network, Binary, Database, Smartphone } from "lucide-react";
 
 const ExperienceCard = ({
   title,
@@ -54,28 +54,52 @@ const ExperienceCard = ({
 const ExperienceSection = () => {
   const experiences = [
     {
-      icon: Network,
-      title: "WordPress Developer",
-      company: "Fiverr",
-      period: "2019 - 2020",
-      description:
-        "Worked on developing and customizing WordPress websites for clients globally.",
-    },
-    {
       icon: Layers,
       title: "Junior Frontend Developer",
-      company: "Sera Programmer",
-      period: "2021 - 2023",
+      company: "Ermon Gabriel",
+      period: "2022 - 2023",
       description:
         "Assisted in building and optimizing user interfaces with a focus on responsive and interactive designs.",
     },
     {
-      icon: Code2,
-      title: "JavaScript Developer",
-      company: "OlovJS (Sera Programmer)",
+      icon: Cpu,
+      title: "PHP Developer",
+      company: "Ermon Gabriel",
       period: "2023 - Present",
       description:
-        "Contributed to developing JavaScript libraries and enhancing framework functionalities.",
+        "Worked on developing and customizing PHP websites for clients globally.",
+    },
+    {
+      icon: Network,
+      title: "WordPress Developer",
+      company: "Ermon Gabriel",
+      period: "2023 - Present",
+      description:
+        "Worked on developing and customizing WordPress websites for clients globally.",
+    },
+    {
+      icon: Code2,
+      title: "JavaScript Developer",
+      company: "Ermon Gabriel",
+      period: "2024 - Present",
+      description:
+        "Contributed to developing JavaScript websites and enhancing framework functionalities.",
+    },
+    {
+      icon: Smartphone,
+      title: "Mobile Developer",
+      company: "Ermon Gabriel",
+      period: "2025 - Present",
+      description:
+        "Contributed to developing Mobile Applications and enhancing functionalities.",
+    },
+    {
+      icon: Database,
+      title: "FullStack Developer",
+      company: "Innov Global Service",
+      period: "2025 - Present",
+      description:
+        "Contributed to developing Mobile and Web Applications and enhancing functionalities.",
     },
   ];
 

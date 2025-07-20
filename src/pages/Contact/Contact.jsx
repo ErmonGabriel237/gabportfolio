@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Send, Phone, MapPin, Mail } from "lucide-react";
+import { Send, Phone, MapPin, Mail, MessageCircle } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -43,48 +43,53 @@ export default function Contact() {
     return isValid;
   };
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (!validateForm()) {
-      setStatus("Please fill in all required fields correctly.");
-      return;
-    }
+  if (!validateForm()) {
+    setStatus("Please fill in all required fields correctly.");
+    return;
+  }
 
-    // Create a new FormData object to send to Web3Forms API
-    const form = new FormData();
-    form.append("access_key", "90f4b8af-e590-42b0-beaf-10b18f66a703"); // Replace with your Web3Forms access key
-    form.append("name", formData.name);
-    form.append("email", formData.email);
-    form.append("subject", formData.subject || "New Contact Form Submission");
-    form.append("message", formData.message);
+  setIsLoading(true);
+  const form = new FormData();
+  form.append("access_key", "46232182-ac35-49a1-939b-669c1bbaaeaa");
+  form.append("name", formData.name);
+  form.append("email", formData.email);
+  form.append("subject", formData.subject || "New Contact Form Submission");
+  form.append("message", formData.message);
 
-    try {
-      // Send form data to Web3Forms API
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: form,
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: form,
+    });
+
+    const result = await response.json();
+    console.log("API Response:", result);
+    console.log("Response Headers:", response.headers.get("Allow"));
+
+    if (response.ok) {
+      setStatus("Message sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
       });
-
-      const result = await response.json();
-
-      if (response.ok) {
-        setStatus("Message sent successfully!");
-        setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
-        });
-        setErrors({});
-      } else {
-        setStatus(result.message || "There was an error sending your message.");
-      }
-    } catch (error) {
-      setStatus("An error occurred. Please try again.");
-      console.error("Error:", error);
+      setErrors({});
+    } else {
+      setStatus(`Error: ${result.message || "Method not allowed or other error."}`);
     }
-  };
+  } catch (error) {
+    setStatus("An error occurred. Please try again.");
+    console.error("Fetch Error:", error);
+  } finally {
+    setIsLoading(false);
+  }
+};
 
   return (
     <main
@@ -101,7 +106,7 @@ export default function Contact() {
                   Get in Touch
                 </h2>
                 <p className="text-gray-300 text-lg">
-                  Have a question or want to work together? Drop us a message!
+                  Have a question or want to work together? Drop a message!
                 </p>
               </div>
 
@@ -112,7 +117,9 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-gray-400">olovajs@gmail.com</p>
+                    <p className="text-gray-400">
+                      ermongabrielelateekoa@gmail.com
+                    </p>
                   </div>
                 </div>
 
@@ -122,7 +129,25 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold">Location</h3>
-                    <p className="text-gray-400">Laxmipure, Natore 6400</p>
+                    <p className="text-gray-400">Yaoundé, Ngousso 6400</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <div className="bg-red-500/10 p-3 rounded-lg">
+                    <Phone className="w-6 h-6 text-red-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">Phone</h3>
+                    <p className="text-gray-400">+237 686 813 207</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <div className="bg-green-500/10 p-3 rounded-lg">
+                    <MessageCircle className="w-6 h-6 text-green-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">Whatsapp</h3>
+                    <p className="text-gray-400">+237 672 262 158</p>
                   </div>
                 </div>
               </div>
@@ -209,10 +234,19 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:opacity-90 transition-opacity"
+                  disabled={isLoading}
+                  className={`w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:opacity-90 transition-opacity ${
+                    isLoading ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
                 >
-                  <span>Send Message</span>
-                  <Send className="w-4 h-4" />
+                  {isLoading ? (
+                    <span>Sending...</span>
+                  ) : (
+                    <>
+                      <span>Send Message</span>
+                      <Send className="w-4 h-4" />
+                    </>
+                  )}
                 </button>
               </form>
 

@@ -1,6 +1,7 @@
 import { ReactLenis } from "lenis/react";
 import { useTransform, motion, useScroll } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
+import { Code } from "lucide-react";
 import PropTypes from "prop-types";
 
 const projects = [
@@ -52,6 +53,12 @@ export default function Projects() {
     target: container,
     offset: ["start start", "end end"],
   });
+  const [showPage, setShowPage] = useState(false); // State to control page visibility
+
+  // Function to toggle or set page visibility
+  const toggleShowPage = (value) => {
+    setShowPage(value);
+  };
 
   useEffect(() => {
     // Add specific styles for 1366x768 resolution
@@ -100,26 +107,54 @@ export default function Projects() {
   return (
     <ReactLenis root>
       <main className="bg-black" ref={container}>
-        <section className="text-white w-full bg-slate-950">
-          {projects.map((project, i) => {
-            const targetScale = 1 - (projects.length - i) * 0.05;
-            return (
-              <Card
-                key={`p_${i}`}
-                i={i}
-                url={project.link}
-                title={project.title}
-                color={project.color}
-                description={project.description}
-                progress={scrollYProgress}
-                range={[i * 0.25, 1]}
-                targetScale={targetScale}
-                githubLink={project.githubLink}
-                liveLink={project.liveLink}
-              />
-            );
-          })}
-        </section>
+        {showPage ? (
+          <section className="text-white w-full bg-slate-950">
+            {projects.map((project, i) => {
+              const targetScale = 1 - (projects.length - i) * 0.05;
+              return (
+                <Card
+                  key={`p_${i}`}
+                  i={i}
+                  url={project.link}
+                  title={project.title}
+                  color={project.color}
+                  description={project.description}
+                  progress={scrollYProgress}
+                  range={[i * 0.25, 1]}
+                  targetScale={targetScale}
+                  githubLink={project.githubLink}
+                  liveLink={project.liveLink}
+                />
+              );
+            })}
+          </section>
+        ) : (
+          <section className="text-white w-full bg-slate-950 min-h-screen flex items-center justify-center">
+            <div className="text-center p-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <Code className="w-16 h-16 mx-auto mb-4 text-blue-400" />
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  Page Under Development
+                </h2>
+                <p className="text-gray-400 text-lg max-w-md mx-auto">
+                  This page is currently being worked on. Check back soon for some awesome content!
+                </p>
+                {/* <motion.button
+                  onClick={() => toggleShowPage(true)}
+                  className="mt-6 bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Preview Content
+                </motion.button> */}
+              </motion.div>
+            </div>
+          </section>
+        )}
       </main>
     </ReactLenis>
   );

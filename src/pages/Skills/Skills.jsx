@@ -10,12 +10,16 @@ import {
   FaDocker,
   FaGitAlt,
   FaLinux,
+  FaJava,
+  FaPhp,
   FaFigma,
   FaAws,
 } from "react-icons/fa";
 import {
   SiNextdotjs,
+  SiVuedotjs,
   SiTypescript,
+  SiJavascript,
   SiTailwindcss,
   SiPostgresql,
   SiMongodb,
@@ -71,7 +75,13 @@ const SkillsSection = () => {
       title: "Frontend Development",
       color: "text-blue-400",
       skills: [
-        { name: "React", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
+        { name: "React",
+          icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> 
+        },
+        {
+          name: "Vue.js",
+          icon: <SiVuedotjs className="w-4 h-4 text-[#38B2AC]" />,
+        },
         {
           name: "Next.js",
           icon: <SiNextdotjs className="w-4 h-4 text-white" />,
@@ -79,6 +89,10 @@ const SkillsSection = () => {
         {
           name: "TypeScript",
           icon: <SiTypescript className="w-4 h-4 text-[#3178C6]" />,
+        },
+        {
+          name: "JavaScript",
+          icon: <SiJavascript className="w-4 h-4 text-[#FCC624]" />,
         },
         {
           name: "Tailwind CSS",
@@ -91,6 +105,10 @@ const SkillsSection = () => {
         {
           name: "CSS3",
           icon: <BsFileEarmarkCode className="w-4 h-4 text-[#1572B6]" />,
+        },
+        {
+          name: "XML",
+          icon: <BsFileEarmarkCode className="w-4 h-4 text-[#FCC624]" />,
         },
       ],
     },
@@ -108,6 +126,14 @@ const SkillsSection = () => {
           icon: <FaPython className="w-4 h-4 text-[#3776AB]" />,
         },
         {
+          name: "Java",
+          icon: <FaJava className="w-4 h-4 text-[#F24E1E]" />,
+        },
+        {
+          name: "Php",
+          icon: <FaPhp className="w-4 h-4 text-[#764ABC]" />,
+        },
+        {
           name: "PostgreSQL",
           icon: <SiPostgresql className="w-4 h-4 text-[#336791]" />,
         },
@@ -119,10 +145,10 @@ const SkillsSection = () => {
           name: "REST APIs",
           icon: <BsGrid1X2 className="w-4 h-4 text-[#FF6C37]" />,
         },
-        {
-          name: "GraphQL",
-          icon: <SiGraphql className="w-4 h-4 text-[#E10098]" />,
-        },
+        // {
+        //   name: "GraphQL",
+        //   icon: <SiGraphql className="w-4 h-4 text-[#E10098]" />,
+        // },
       ],
     },
     {
@@ -130,19 +156,21 @@ const SkillsSection = () => {
       title: "UI/UX Design",
       color: "text-purple-400",
       skills: [
-        { name: "Figma", icon: <FaFigma className="w-4 h-4 text-[#F24E1E]" /> },
+        { name: "Figma",
+          icon: <FaFigma className="w-4 h-4 text-[#F24E1E]" /> 
+        },
         {
           name: "Responsive Design",
           icon: <Layout className="w-4 h-4 text-[#38B2AC]" />,
         },
-        {
-          name: "Wireframing",
-          icon: <BsGrid1X2 className="w-4 h-4 text-[#9CA3AF]" />,
-        },
-        {
-          name: "Prototyping",
-          icon: <MdAnimation className="w-4 h-4 text-[#F59E0B]" />,
-        },
+        // {
+        //   name: "Wireframing",
+        //   icon: <BsGrid1X2 className="w-4 h-4 text-[#9CA3AF]" />,
+        // },
+        // {
+        //   name: "Prototyping",
+        //   icon: <MdAnimation className="w-4 h-4 text-[#F59E0B]" />,
+        // },
       ],
     },
     {
@@ -150,18 +178,24 @@ const SkillsSection = () => {
       title: "Cloud & DevOps",
       color: "text-orange-400",
       skills: [
-        { name: "AWS", icon: <FaAws className="w-4 h-4 text-[#FF9900]" /> },
+        { name: "AWS", 
+          icon: <FaAws className="w-4 h-4 text-[#FF9900]" /> 
+        },
         {
           name: "Docker",
           icon: <FaDocker className="w-4 h-4 text-[#2496ED]" />,
         },
         { name: "CI/CD", icon: <FcWorkflow className="w-4 h-4" /> },
-        {
-          name: "Kubernetes",
-          icon: <BsGrid1X2 className="w-4 h-4 text-[#326CE5]" />,
+        // {
+        //   name: "Kubernetes",
+        //   icon: <BsGrid1X2 className="w-4 h-4 text-[#326CE5]" />,
+        // },
+        { name: "Git", 
+          icon: <FaGitAlt className="w-4 h-4 text-[#F05032]" /> 
         },
-        { name: "Git", icon: <FaGitAlt className="w-4 h-4 text-[#F05032]" /> },
-        { name: "Linux", icon: <FaLinux className="w-4 h-4 text-[#FCC624]" /> },
+        { name: "Linux", 
+          icon: <FaLinux className="w-4 h-4 text-[#FCC624]" /> 
+        },
       ],
     },
     {
@@ -173,18 +207,26 @@ const SkillsSection = () => {
           name: "VS Code",
           icon: <TbBrandVscode className="w-4 h-4 text-[#007ACC]" />,
         },
-        { name: "Jest", icon: <SiJest className="w-4 h-4 text-[#C21325]" /> },
-        {
-          name: "Webpack",
-          icon: <SiWebpack className="w-4 h-4 text-[#8DD6F9]" />,
+        // { name: "Jest", 
+        //   icon: <SiJest className="w-4 h-4 text-[#C21325]" /> 
+        // },
+        // {
+        //   name: "Webpack",
+        //   icon: <SiWebpack className="w-4 h-4 text-[#8DD6F9]" />,
+        // },
+        { name: "Redux", 
+          icon: <SiRedux className="w-4 h-4 text-[#764ABC]" /> 
         },
-        { name: "Redux", icon: <SiRedux className="w-4 h-4 text-[#764ABC]" /> },
         {
           name: "Firebase",
           icon: <SiFirebase className="w-4 h-4 text-[#FFCA28]" />,
         },
-        { name: "Vercel", icon: <SiVercel className="w-4 h-4 text-white" /> },
-        { name: "Vite", icon: <SiVite className="w-4 h-4 text-[#646CFF]" /> },
+        { name: "Vercel", 
+          icon: <SiVercel className="w-4 h-4 text-white" /> 
+        },
+        { name: "Vite", 
+          icon: <SiVite className="w-4 h-4 text-[#646CFF]" /> 
+        },
       ],
     },
     {
@@ -200,14 +242,14 @@ const SkillsSection = () => {
           name: "SVG Animation",
           icon: <MdAnimation className="w-4 h-4 text-[#00C853]" />,
         },
-        {
-          name: "3D Modeling",
-          icon: <Cpu className="w-4 h-4 text-[#7C4DFF]" />,
-        },
-        {
-          name: "Motion Graphics",
-          icon: <MdAnimation className="w-4 h-4 text-[#FF6D00]" />,
-        },
+        // {
+        //   name: "3D Modeling",
+        //   icon: <Cpu className="w-4 h-4 text-[#7C4DFF]" />,
+        // },
+        // {
+        //   name: "Motion Graphics",
+        //   icon: <MdAnimation className="w-4 h-4 text-[#FF6D00]" />,
+        // },
       ],
     },
   ];
