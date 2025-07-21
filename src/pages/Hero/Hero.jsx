@@ -42,7 +42,7 @@ const GridBackground = () => {
 
 export default function Hero() {
   const words = [
-    "Full-Stack Developer & UgitgitI/UX Enthusiast",
+    "Full-Stack Developer & UI/UX Enthusiast",
     "JavaScript Developer & Content Creator",
     "Learning MERN Stack and Mobile Development",
     "Linux & GitHub for DevOps Enthusiast",
@@ -136,7 +136,7 @@ const profile = {
 
   return (
     <>
-      <main className="bg-[#020617] sm:mx-10 text-white min-h-screen">
+      <main className="bg-[#020617] text-white min-h-screen">
         <section
           className="hero min-h-screen flex items-center justify-center relative px-4 sm:px-6 lg:px-8 py-10 md:py-16 lg:py-0 hero-section-padding"
           style={{ paddingTop: "var(--hero-padding-top, 0)" }}
@@ -176,7 +176,7 @@ const profile = {
               <div className="absolute hidden lg:block lg:top-40 lg:-right-20 w-48 h-48 lg:w-64 lg:h-64 bg-teal-500/10 rounded-full blur-3xl"></div>
 
               {/* Welcome badge */}
-              <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 mb-6 sm:mb-8 animate__animated animate__fadeInDown animate__delay-1s">
+              <div className="inline-flex items-center gap-2 px-3 lg:mx-10 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 mb-6 sm:mb-8 animate__animated animate__fadeInDown animate__delay-1s">
                 <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
                 <span className="text-gray-300 text-xs sm:text-sm font-medium">
                   Welcome to my universe
@@ -221,8 +221,8 @@ const profile = {
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate__animated animate__fadeInUp animate__delay-2s">
                 {/* View Projects Button */}
                 <a
-                  href="https://github.com/ErmonGabriel237"
-                  target="_blank"
+                  href="/contact"
+                  // target="_blank"
                   className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-teal-400 p-0.5 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                 >
                   <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-teal-400">
