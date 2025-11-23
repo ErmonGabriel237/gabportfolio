@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { inject } from "@vercel/analytics";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import { scrollToHashOnLoad } from "@/lib/scroll";
 
 import "./assets/css/index.css";
@@ -25,6 +26,7 @@ export default function App() {
 
   return (
     <I18nProvider>
+      <SpeedInsights />
       <Header />
       {/* Conditional Rendering */}
       {isOnePage ? (
