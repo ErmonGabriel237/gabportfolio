@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { inject } from '@vercel/analytics';
  
 import "./assets/css/index.css";
@@ -13,7 +13,7 @@ import Education from "./pages/Education/Education";
 import { Route, Routes } from "react-router-dom";
 
 export default function App() {
-  const [isOnePage, setIsOnePage] = useState(false); // Toggle state
+  const [isOnePage, setIsOnePage] = useState(true); // Toggle state
   inject();
 
   return (
@@ -27,6 +27,7 @@ export default function App() {
           <Skills />
           <Experience />
           <Education />
+          <Projects />
           <Contact />
         </>
       ) : (

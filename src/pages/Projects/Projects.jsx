@@ -53,7 +53,7 @@ export default function Projects() {
     target: container,
     offset: ["start start", "end end"],
   });
-  const [showPage, setShowPage] = useState(false); // State to control page visibility
+  const [showPage, setShowPage] = useState(true); // State to control page visibility
 
   // Function to toggle or set page visibility
   const toggleShowPage = (value) => {

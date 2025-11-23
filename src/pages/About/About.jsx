@@ -1,5 +1,4 @@
 import HeroImg from "@/assets/images/myPhoto.jpg";
-import OlovaLogo from "@/assets/images/olova.png";
 
 export default function About() {
   return (
@@ -22,21 +21,16 @@ export default function About() {
               </div>
             </div>
 
-            <div className="relative space-y-4">
+            <div className="relative sm:pt-0 lg:pt-16 space-y-4">
               <p className="text-white">
-                Hello! I'm Ermon Gabriel, a passionate JavaScript, PHP and Mobile developer
+                Hello! I'm Ermon Gabriel, a passionate JavaScript, PHP developer
                 specializing in creating innovative web solutions and
                 user-friendly interfaces.{" "}
-                {/* <span className="font-bold text-white">
-                  As the creator of the OlovaJS UI Framework
-                </span> */}
                 , I'm dedicated to simplifying development workflows.
               </p>
               <p className="text-white">
                 My focus is on making web development faster, easier, and
-                accessible to all developers. Currently, I'm expanding into
-                backend development to grow as a full-stack developer and create
-                seamless, robust web applications.
+                accessible to all developers.
               </p>
 
               <div className="pt-6">
@@ -51,16 +45,6 @@ export default function About() {
                     <cite className="block font-medium text-white">
                       Ermon Gabriel
                     </cite>
-                    {/* <div className="flex items-center gap-2">
-                      <img
-                        className="h-5 w-fit"
-                        src={OlovaLogo}
-                        alt="Olova Logo"
-                        height="20"
-                        width="auto"
-                      />
-                      <span className="text-white">OlovaJS</span>
-                    </div> */}
                   </div>
                 </blockquote>
               </div>

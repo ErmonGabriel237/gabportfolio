@@ -23,9 +23,6 @@ import {
   SiTailwindcss,
   SiPostgresql,
   SiMongodb,
-  SiGraphql,
-  SiJest,
-  SiWebpack,
   SiRedux,
   SiFirebase,
   SiVercel,
@@ -82,10 +79,10 @@ const SkillsSection = () => {
           name: "Vue.js",
           icon: <SiVuedotjs className="w-4 h-4 text-[#38B2AC]" />,
         },
-        {
-          name: "Next.js",
-          icon: <SiNextdotjs className="w-4 h-4 text-white" />,
-        },
+        // {
+        //   name: "Next.js",
+        //   icon: <SiNextdotjs className="w-4 h-4 text-white" />,
+        // },
         {
           name: "TypeScript",
           icon: <SiTypescript className="w-4 h-4 text-[#3178C6]" />,
@@ -105,10 +102,6 @@ const SkillsSection = () => {
         {
           name: "CSS3",
           icon: <BsFileEarmarkCode className="w-4 h-4 text-[#1572B6]" />,
-        },
-        {
-          name: "XML",
-          icon: <BsFileEarmarkCode className="w-4 h-4 text-[#FCC624]" />,
         },
       ],
     },
@@ -130,7 +123,7 @@ const SkillsSection = () => {
           icon: <FaJava className="w-4 h-4 text-[#F24E1E]" />,
         },
         {
-          name: "Php",
+          name: "PHP",
           icon: <FaPhp className="w-4 h-4 text-[#764ABC]" />,
         },
         {
@@ -178,9 +171,9 @@ const SkillsSection = () => {
       title: "Cloud & DevOps",
       color: "text-orange-400",
       skills: [
-        { name: "AWS", 
-          icon: <FaAws className="w-4 h-4 text-[#FF9900]" /> 
-        },
+        // { name: "AWS", 
+        //   icon: <FaAws className="w-4 h-4 text-[#FF9900]" /> 
+        // },
         {
           name: "Docker",
           icon: <FaDocker className="w-4 h-4 text-[#2496ED]" />,

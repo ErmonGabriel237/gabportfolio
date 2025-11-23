@@ -42,21 +42,21 @@ const GridBackground = () => {
 
 export default function Hero() {
   const words = [
-    "Full-Stack Developer & UI/UX Enthusiast",
-    "JavaScript Developer & Content Creator",
-    "Learning MERN Stack and Mobile Development",
-    "Linux & GitHub for DevOps Enthusiast",
+    "UI/UX Enthusiast",
+    "JavaScript | PHP Developer",
+    "MERN Stack",
+    "Linux | GitHub for DevOps",
   ];
 
   const [code] = useState(`
 const profile = {
     name: 'Ermon Gabriel',
-    title: 'Full-Stack Developer | Mobile Developer | Problem Solver',
+    title: 'PHP | MERN Stack',
     skills: [
         'ReactJS', 'PHP', 'Redux', 'Express',
         'MySQL', 'MongoDB', 'TypeScript', 'JavaScript', 'HTML', 'CSS',
         'Tailwind CSS', 'Bootstrap', 'Material UI', 'GitHub',
-        'Git', 'Linux', 'Discord Development', 'Node.js',
+        'Git', 'Linux', 'Node.js',
     ],
     hardWorker: true,
     quickLearner: true,
@@ -66,8 +66,8 @@ const profile = {
         return (
             this.hardWorker &&
             this.problemSolver &&
-            this.skills.length >= 18 &&
-            this.yearsOfExperience >= 2
+            this.skills.length >= 17 &&
+            this.yearsOfExperience >= 3
         );
     }
 };
@@ -153,7 +153,7 @@ const profile = {
 
           {/* Meteors Effect */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <Meteors number={10} />
+            <Meteors number={15} />
           </div>
 
           {/* Main content container */}
@@ -212,7 +212,7 @@ const profile = {
               {/* Description */}
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
-                  JavaScript lover 🚀 | Content creator 🔧 | Crafting frameworks
+                  JavaScript lover 🚀 | Content creator 🔧 | Crafting solutions
                   and coding the future 💻✨
                 </p>
               </div>
@@ -235,7 +235,8 @@ const profile = {
 
                 {/* Contact Button */}
                 <a
-                  href="#"
+                  href="../../../public/ermon_gabriel.pdf"
+                  download
                   className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-gradient-to-r from-gray-800 to-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                 >
                   <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">

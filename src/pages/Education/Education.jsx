@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const EducationSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [showPage, setShowPage] = useState(false); // State to control page visibility
+  const [showPage, setShowPage] = useState(true); // State to control page visibility
 
   // Function to toggle or set page visibility
   const toggleShowPage = (value) => {
@@ -21,6 +21,16 @@ const EducationSection = () => {
       skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
       description:
         "Focused on core science subjects with emphasis on practical laboratory work and scientific research methodologies.",
+    },
+    {
+      degree: "Higher Secondary Certificate (HSC)",
+      school: "Dottopara Model Degree College",
+      mascot: "📗",
+      year: "2021-2023",
+      achievements: ["GPA: 4.25", "Subject: Arts"],
+      skills: ["Literature", "Social Studies", "Economics", "History"],
+      description:
+        "Developed strong analytical and critical thinking skills through comprehensive study of humanities and social sciences.",
     },
     {
       degree: "Higher Secondary Certificate (HSC)",
