@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Send, Phone, MapPin, Mail, MessageCircle } from "lucide-react";
 
 export default function Contact() {
@@ -46,53 +46,56 @@ export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  if (!validateForm()) {
-    setStatus("Please fill in all required fields correctly.");
-    return;
-  }
-
-  setIsLoading(true);
-  const form = new FormData();
-  form.append("access_key", "46232182-ac35-49a1-939b-669c1bbaaeaa");
-  form.append("name", formData.name);
-  form.append("email", formData.email);
-  form.append("subject", formData.subject || "New Contact Form Submission");
-  form.append("message", formData.message);
-
-  try {
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: form,
-    });
-
-    const result = await response.json();
-    console.log("API Response:", result);
-    console.log("Response Headers:", response.headers.get("Allow"));
-
-    if (response.ok) {
-      setStatus("Message sent successfully!");
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-      setErrors({});
-    } else {
-      setStatus(`Error: ${result.message || "Method not allowed or other error."}`);
+    if (!validateForm()) {
+      setStatus("Please fill in all required fields correctly.");
+      return;
     }
-  } catch (error) {
-    setStatus("An error occurred. Please try again.");
-    console.error("Fetch Error:", error);
-  } finally {
-    setIsLoading(false);
-  }
-};
+
+    setIsLoading(true);
+    const form = new FormData();
+    form.append("access_key", "46232182-ac35-49a1-939b-669c1bbaaeaa");
+    form.append("name", formData.name);
+    form.append("email", formData.email);
+    form.append("subject", formData.subject || "New Contact Form Submission");
+    form.append("message", formData.message);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: form,
+      });
+
+      const result = await response.json();
+      console.log("API Response:", result);
+      console.log("Response Headers:", response.headers.get("Allow"));
+
+      if (response.ok) {
+        setStatus("Message sent successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+        setErrors({});
+      } else {
+        setStatus(
+          `Error: ${result.message || "Method not allowed or other error."}`
+        );
+      }
+    } catch (error) {
+      setStatus("An error occurred. Please try again.");
+      console.error("Fetch Error:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <main
+      id="contact"
       className="pt-20 lg:pt-[0rem] bg-[#04081A]
  text-white min-h-screen"
     >

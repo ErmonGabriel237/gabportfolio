@@ -1,5 +1,6 @@
-import React from "react";
-import { Code2, Activity, Cpu, Layers, Network, Binary, Database, Smartphone } from "lucide-react";
+/* eslint-disable react/prop-types */
+// React runtime handles JSX; no default React import required
+import { Cpu, Layers } from "lucide-react";
 
 const ExperienceCard = ({
   title,
@@ -55,57 +56,60 @@ const ExperienceSection = () => {
   const experiences = [
     {
       icon: Layers,
-      title: "Junior Frontend Developer",
-      company: "Ermon Gabriel",
-      period: "2022 - 2023",
+      title: "Lead Developer",
+      company: "BlakTec",
+      period: "2024 - present",
       description:
-        "Assisted in building and optimizing user interfaces with a focus on responsive and interactive designs.",
+        "Working with ethics along side with other developers, i am in charge of leading the project OCaLi",
     },
     {
       icon: Cpu,
-      title: "PHP Developer",
-      company: "Ermon Gabriel",
-      period: "2023 - Present",
-      description:
-        "Worked on developing and customizing PHP websites for clients globally.",
-    },
-    {
-      icon: Network,
-      title: "WordPress Developer",
-      company: "Ermon Gabriel",
-      period: "2023 - Present",
-      description:
-        "Worked on developing and customizing WordPress websites for clients globally.",
-    },
-    {
-      icon: Code2,
-      title: "JavaScript Developer",
-      company: "Ermon Gabriel",
-      period: "2024 - Present",
-      description:
-        "Contributed to developing JavaScript websites and enhancing framework functionalities.",
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile Developer",
-      company: "Ermon Gabriel",
-      period: "2025 - Present",
-      description:
-        "Contributed to developing Mobile Applications and enhancing functionalities.",
-    },
-    {
-      icon: Database,
       title: "FullStack Developer",
-      company: "Innov Global Service",
+      company: "Osmos",
       period: "2025 - Present",
       description:
-        "Contributed to developing Mobile and Web Applications and enhancing functionalities.",
+        "Assisted in building and optimizing user interfaces with a focus on responsive and interactive designs follow along with the implementation and integration of APIS.",
     },
+    // {
+    //   icon: Network,
+    //   title: "WordPress Developer",
+    //   company: "Ermon Gabriel",
+    //   period: "2023 - Present",
+    //   description:
+    //     "Worked on developing and customizing WordPress websites for clients globally.",
+    // },
+    // {
+    //   icon: Code2,
+    //   title: "JavaScript Developer",
+    //   company: "Ermon Gabriel",
+    //   period: "2024 - Present",
+    //   description:
+    //     "Contributed to developing JavaScript websites and enhancing framework functionalities.",
+    // },
+    // {
+    //   icon: Smartphone,
+    //   title: "Mobile Developer",
+    //   company: "Ermon Gabriel",
+    //   period: "2025 - Present",
+    //   description:
+    //     "Contributed to developing Mobile Applications and enhancing functionalities.",
+    // },
+    // {
+    //   icon: Database,
+    //   title: "FullStack Developer",
+    //   company: "Innov Global Service",
+    //   period: "2025 - Present",
+    //   description:
+    //     "Contributed to developing Mobile and Web Applications and enhancing functionalities.",
+    // },
   ];
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-b relative overflow-hidden pt-32 pb-20">
+      <div
+        id="experience"
+        className="min-h-screen bg-gradient-to-b relative overflow-hidden pt-32 pb-20"
+      >
         {/* Animated gradient background */}
         <div className="absolute inset-0 bg-[#04081A]" />
 
@@ -138,7 +142,7 @@ const ExperienceSection = () => {
               <div className="absolute inset-0 -z-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 blur-3xl rounded-full" />
             </div>
             <p className="text-lg md:text-xl text-gray-400 font-medium tracking-wide text-center max-w-2xl">
-              "Transforming ideas into digital reality, one project at a time"
+              Transforming ideas into digital reality, one project at a time
             </p>
           </div>
 

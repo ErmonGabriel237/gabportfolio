@@ -23,10 +23,10 @@ export default function About() {
 
             <div className="relative sm:pt-0 lg:pt-16 space-y-4">
               <p className="text-white">
-                Hello! I'm Ermon Gabriel, a passionate JavaScript, PHP developer
-                specializing in creating innovative web solutions and
-                user-friendly interfaces.{" "}
-                , I'm dedicated to simplifying development workflows.
+                Hello! I&apos;m Ermon Gabriel, a passionate JavaScript, PHP
+                developer specializing in creating innovative web solutions and
+                user-friendly interfaces. I&apos;m dedicated to simplifying
+                development workflows.
               </p>
               <p className="text-white">
                 My focus is on making web development faster, easier, and
@@ -36,9 +36,9 @@ export default function About() {
               <div className="pt-6">
                 <blockquote className="border-l-4 border-gray-300 pl-4">
                   <p className="text-white">
-                    I'm a lifelong learner and innovator, driven by a desire to
-                    contribute to the developer community with new ideas and
-                    tools that deliver real value.
+                    I&apos;m a lifelong learner and innovator, driven by a
+                    desire to contribute to the developer community with new
+                    ideas and tools that deliver real value.
                   </p>
 
                   <div className="mt-6 space-y-3">

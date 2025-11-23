@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   FaHome,
   FaLaptopCode,
-  FaUser,
   FaBriefcase,
   FaGraduationCap,
   FaCode,
@@ -10,6 +9,8 @@ import {
   FaBars,
 } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
+import { scrollToId } from "@/lib/scroll";
+import { useI18n } from "@/lib/i18n";
 
 export default function Header() {
   const location = useLocation();
@@ -18,31 +19,41 @@ export default function Header() {
     return path;
   });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  const { t } = useI18n();
 
   const navLinks = [
-    { id: "home", icon: FaHome, text: "Home", path: "/" },
-    { id: "skills", icon: FaCode, text: "Skills", path: "/skills" },
+    { id: "home", icon: FaHome, text: t("nav.home", "Home"), path: "/" },
+    {
+      id: "skills",
+      icon: FaCode,
+      text: t("nav.skills", "Skills"),
+      path: "/skills",
+    },
     {
       id: "experience",
       icon: FaBriefcase,
-      text: "Experience",
+      text: t("nav.experience", "Experience"),
       path: "/experience",
     },
     {
       id: "education",
       icon: FaGraduationCap,
-      text: "Education",
+      text: t("nav.education", "Education"),
       path: "/education",
     },
-    { id: "projects", icon: FaLaptopCode, text: "Projects", path: "/projects" },
-    { id: "contact", icon: FaEnvelope, text: "Contact", path: "/contact" },
+    {
+      id: "projects",
+      icon: FaLaptopCode,
+      text: t("nav.projects", "Projects"),
+      path: "/projects",
+    },
+    {
+      id: "contact",
+      icon: FaEnvelope,
+      text: t("nav.contact", "Contact"),
+      path: "/contact",
+    },
   ];
 
   return (
@@ -52,8 +63,10 @@ export default function Header() {
           <nav className="bg-gray-900/90 backdrop-blur-md md:rounded-full px-4 md:px-6 py-2.5">
             {/* Mobile Menu Button */}
             <div className="flex justify-between items-center md:hidden px-2">
-              <Link to="/" className="text-white font-bold">Portfolio</Link>
-              <button 
+              <Link to="/" className="text-white font-bold">
+                Ermon Gabriel
+              </Link>
+              <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-white p-2"
               >
@@ -62,13 +75,25 @@ export default function Header() {
             </div>
 
             {/* Navigation Links */}
-            <div className={`${isMenuOpen ? 'block' : 'hidden'} md:block`}>
+            <div className={`${isMenuOpen ? "block" : "hidden"} md:block`}>
               <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-1 lg:gap-2 py-4 md:py-0">
                 {navLinks.map(({ id, icon: Icon, text, path }) => (
                   <Link
                     key={id}
                     to={path}
-                    onClick={() => {
+                    onClick={(e) => {
+                      // If a section with this id exists on the page, smooth-scroll to it
+                      const el = document.getElementById(id);
+                      if (el) {
+                        e.preventDefault();
+                        setActiveLink(id);
+                        setIsMenuOpen(false);
+                        scrollToId(id, {
+                          offset: window.innerWidth < 768 ? 56 : 72,
+                        });
+                        return;
+                      }
+                      // otherwise allow navigation (router will handle it)
                       setActiveLink(id);
                       setIsMenuOpen(false);
                     }}

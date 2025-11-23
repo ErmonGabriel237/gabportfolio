@@ -1,46 +1,51 @@
-import React, { useState } from "react";
-import { Code, Star, Award, Calendar, BookOpen, GraduationCap, Trophy } from "lucide-react";
+import { useState } from "react";
+import { Code, Calendar, BookOpen } from "lucide-react";
 import { motion } from "framer-motion";
 
 const EducationSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [showPage, setShowPage] = useState(true); // State to control page visibility
-
-  // Function to toggle or set page visibility
-  const toggleShowPage = (value) => {
-    setShowPage(value);
-  };
+  const [showPage] = useState(true); // State to control page visibility
 
   const educationData = [
     {
       degree: "Secondary School Certificate (SSC)",
-      school: "Natore Textile Institute",
+      school: "Bodio Bilingual Complex",
       mascot: "📘",
-      year: "2019-2021",
+      year: "2016-2021",
       achievements: ["GPA: 4.89", "Subject: Science"],
-      skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
+      skills: [
+        "Mathematics",
+        "A. Math",
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "English",
+        "French",
+        "Economics",
+        "Computer Science",
+        "Geography",
+      ],
+      description: "Diving into the science world ",
+    },
+    {
+      degree: "Higher Secondary Certificate (HSC)",
+      school: "Institut Mbeukam",
+      mascot: "📗",
+      year: "2021-2023",
+      achievements: ["GPA: 4.25", "Subject: Arts"],
+      skills: ["Literature", "Social Studies", "Economics", "History"],
       description:
         "Focused on core science subjects with emphasis on practical laboratory work and scientific research methodologies.",
     },
     {
-      degree: "Higher Secondary Certificate (HSC)",
-      school: "Dottopara Model Degree College",
-      mascot: "📗",
-      year: "2021-2023",
+      degree: "Software Engineer Certificate (SEC)",
+      school: "IAI Cameroun",
+      mascot: "📘",
+      year: "On process",
       achievements: ["GPA: 4.25", "Subject: Arts"],
       skills: ["Literature", "Social Studies", "Economics", "History"],
       description:
-        "Developed strong analytical and critical thinking skills through comprehensive study of humanities and social sciences.",
-    },
-    {
-      degree: "Higher Secondary Certificate (HSC)",
-      school: "Dottopara Model Degree College",
-      mascot: "📗",
-      year: "2021-2023",
-      achievements: ["GPA: 4.25", "Subject: Arts"],
-      skills: ["Literature", "Social Studies", "Economics", "History"],
-      description:
-        "Developed strong analytical and critical thinking skills through comprehensive study of humanities and social sciences.",
+        "Developing strong analytical and critical thinking skills through comprehensive study of humanities and social sciences.",
     },
   ];
 
@@ -67,7 +72,10 @@ const EducationSection = () => {
   };
 
   return (
-    <section className="min-h-screen relative overflow-hidden py-40 bg-[#04081A]">
+    <section
+      id="education"
+      className="min-h-screen relative overflow-hidden py-40 bg-[#04081A]"
+    >
       {/* Grid Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:50px_50px]" />
@@ -132,7 +140,7 @@ const EducationSection = () => {
                     {edu.description}
                   </p>
 
-                  <div className="space-y-3">
+                  {/* <div className="space-y-3">
                     <h4 className="text-sm font-semibold text-white flex items-center gap-2">
                       <Trophy className="w-4 h-4 text-yellow-500" />
                       Key Achievements
@@ -148,9 +156,9 @@ const EducationSection = () => {
                         </div>
                       ))}
                     </div>
-                  </div>
+                  </div> */}
 
-                  <div className="flex flex-wrap gap-2">
+                  {/* <div className="flex flex-wrap gap-2">
                     {edu.skills.map((skill, i) => (
                       <span
                         key={i}
@@ -159,7 +167,7 @@ const EducationSection = () => {
                         {skill}
                       </span>
                     ))}
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
             ))}
@@ -178,7 +186,8 @@ const EducationSection = () => {
               Page Under Development
             </h2>
             <p className="text-gray-300 text-lg max-w-md mx-auto">
-              This page is currently being worked on. Check back soon for some awesome content!
+              This page is currently being worked on. Check back soon for some
+              awesome content!
             </p>
             {/* <motion.button
               onClick={() => toggleShowPage(true)}

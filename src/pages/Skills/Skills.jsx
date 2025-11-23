@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+// React is not used directly in this file (JSX runtime handles it)
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import IconCloudDemo from "@/components/globe";
@@ -13,10 +14,8 @@ import {
   FaJava,
   FaPhp,
   FaFigma,
-  FaAws,
 } from "react-icons/fa";
 import {
-  SiNextdotjs,
   SiVuedotjs,
   SiTypescript,
   SiJavascript,
@@ -72,9 +71,7 @@ const SkillsSection = () => {
       title: "Frontend Development",
       color: "text-blue-400",
       skills: [
-        { name: "React",
-          icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> 
-        },
+        { name: "React", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
         {
           name: "Vue.js",
           icon: <SiVuedotjs className="w-4 h-4 text-[#38B2AC]" />,
@@ -149,9 +146,7 @@ const SkillsSection = () => {
       title: "UI/UX Design",
       color: "text-purple-400",
       skills: [
-        { name: "Figma",
-          icon: <FaFigma className="w-4 h-4 text-[#F24E1E]" /> 
-        },
+        { name: "Figma", icon: <FaFigma className="w-4 h-4 text-[#F24E1E]" /> },
         {
           name: "Responsive Design",
           icon: <Layout className="w-4 h-4 text-[#38B2AC]" />,
@@ -171,8 +166,8 @@ const SkillsSection = () => {
       title: "Cloud & DevOps",
       color: "text-orange-400",
       skills: [
-        // { name: "AWS", 
-        //   icon: <FaAws className="w-4 h-4 text-[#FF9900]" /> 
+        // { name: "AWS",
+        //   icon: <FaAws className="w-4 h-4 text-[#FF9900]" />
         // },
         {
           name: "Docker",
@@ -183,12 +178,8 @@ const SkillsSection = () => {
         //   name: "Kubernetes",
         //   icon: <BsGrid1X2 className="w-4 h-4 text-[#326CE5]" />,
         // },
-        { name: "Git", 
-          icon: <FaGitAlt className="w-4 h-4 text-[#F05032]" /> 
-        },
-        { name: "Linux", 
-          icon: <FaLinux className="w-4 h-4 text-[#FCC624]" /> 
-        },
+        { name: "Git", icon: <FaGitAlt className="w-4 h-4 text-[#F05032]" /> },
+        { name: "Linux", icon: <FaLinux className="w-4 h-4 text-[#FCC624]" /> },
       ],
     },
     {
@@ -200,26 +191,20 @@ const SkillsSection = () => {
           name: "VS Code",
           icon: <TbBrandVscode className="w-4 h-4 text-[#007ACC]" />,
         },
-        // { name: "Jest", 
-        //   icon: <SiJest className="w-4 h-4 text-[#C21325]" /> 
+        // { name: "Jest",
+        //   icon: <SiJest className="w-4 h-4 text-[#C21325]" />
         // },
         // {
         //   name: "Webpack",
         //   icon: <SiWebpack className="w-4 h-4 text-[#8DD6F9]" />,
         // },
-        { name: "Redux", 
-          icon: <SiRedux className="w-4 h-4 text-[#764ABC]" /> 
-        },
+        { name: "Redux", icon: <SiRedux className="w-4 h-4 text-[#764ABC]" /> },
         {
           name: "Firebase",
           icon: <SiFirebase className="w-4 h-4 text-[#FFCA28]" />,
         },
-        { name: "Vercel", 
-          icon: <SiVercel className="w-4 h-4 text-white" /> 
-        },
-        { name: "Vite", 
-          icon: <SiVite className="w-4 h-4 text-[#646CFF]" /> 
-        },
+        { name: "Vercel", icon: <SiVercel className="w-4 h-4 text-white" /> },
+        { name: "Vite", icon: <SiVite className="w-4 h-4 text-[#646CFF]" /> },
       ],
     },
     {
@@ -248,7 +233,10 @@ const SkillsSection = () => {
   ];
 
   return (
-    <main className="pt-15 lg:pt-0 text-white min-h-screen bg-[#04081A] relative">
+    <main
+      id="skills"
+      className="pt-15 lg:pt-0 text-white min-h-screen bg-[#04081A] relative"
+    >
       {/* Grid Background */}
       <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
 
@@ -268,7 +256,7 @@ const SkillsSection = () => {
           ))}
         </div>
       </section>
-      <style jsx>{`
+      <style>{`
         @keyframes shimmer {
           0% {
             transform: translateX(-100%);
