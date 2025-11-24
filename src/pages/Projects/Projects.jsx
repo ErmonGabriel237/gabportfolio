@@ -15,6 +15,16 @@ const projects = [
     githubLink: "",
     liveLink: "https://ermongabriel.vercel.app",
   },
+  {
+    title: "A Chuch website built with React and Tailwind CSS ",
+    description:
+      "A Church website built with React and Tailwind CSS to showcase your skills, projects, and experience in a modern design.",
+    src: "tree.jpg",
+    link: "https://i.postimg.cc/bwTLXkVz/preview-portfolio.png",
+    color: "#8f89ff",
+    githubLink: "",
+    liveLink: "https://ermongabriel.vercel.app",
+  },
 ];
 
 export default function Projects() {

@@ -13,7 +13,7 @@ export default function LanguageSwitcher() {
   ];
 
   return (
-    <div className="fixed right-0 md:right-6 bottom-0 md:bottom-6 z-50 w-full md:w-auto flex justify-end md:justify-start pointer-events-none">
+    <div className="fixed right-6 md:right-6 bottom-6 md:bottom-6 z-50 w-full md:w-auto flex justify-end md:justify-start pointer-events-none">
       <div className="relative pointer-events-auto mr-6 md:mr-0">
         <button
           aria-label="Choose language"
@@ -47,12 +47,8 @@ export default function LanguageSwitcher() {
             <div className="md:hidden fixed left-0 right-0 bottom-0 bg-gray-900/95 border-t border-gray-700 py-4 shadow-xl">
               <div className="max-w-3xl mx-auto px-4">
                 <div className="flex items-center justify-between mb-2">
-                  <div className="text-white font-semibold">
-                    Select language
-                  </div>
-                  <button onClick={() => setOpen(false)} className="text-white">
-                    Close
-                  </button>
+                  <div className="text-white font-semibold">Select language</div>
+                  <button onClick={() => setOpen(false)} className="text-white">Close</button>
                 </div>
                 <div className="grid grid-cols-1 gap-2">
                   {options.map((opt) => (
