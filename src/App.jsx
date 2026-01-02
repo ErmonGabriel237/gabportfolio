@@ -22,7 +22,10 @@ export default function App() {
 
   useEffect(() => {
     scrollToHashOnLoad(72);
-  }, []);
+    try {
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+  } catch (err) {}
+  }, [],[location]);
 
   return (
     <I18nProvider>
