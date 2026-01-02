@@ -64,7 +64,7 @@ const SkillCard = ({ icon: Icon, title, skills, color }) => (
         </div>
       </CardContent>
     </Card>
-    <AdComponent slot="YOUR_AD_SLOT_ID_HERE" />
+    <AdComponent slot="5613161938" />
   </>
 );
 

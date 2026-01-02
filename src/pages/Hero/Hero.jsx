@@ -39,7 +39,7 @@ const GridBackground = () => {
           <rect width="100%" height="100%" fill="url(#grid)" />
         </svg>
       </div>
-      <AdComponent slot="YOUR_AD_SLOT_ID_HERE" />
+      <AdComponent slot="5613161938" />
     </div>
   );
 };

@@ -50,7 +50,7 @@ const ExperienceCard = ({
         <div className="absolute bottom-0 left-0 w-[2px] h-6 bg-purple-500/50" />
       </div>
     </div>
-    <AdComponent slot="YOUR_AD_SLOT_ID_HERE" />
+    <AdComponent slot="5613161938" />
   </div>
 );
 

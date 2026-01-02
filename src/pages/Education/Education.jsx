@@ -201,7 +201,7 @@ const EducationSection = () => {
           </motion.div>
         </div>
       )}
-      <AdComponent slot="YOUR_AD_SLOT_ID_HERE" />
+      <AdComponent slot="5613161938" />
     </section>
   );
 };

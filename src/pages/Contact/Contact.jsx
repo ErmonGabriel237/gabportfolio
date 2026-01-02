@@ -270,7 +270,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
-      <AdComponent slot="YOUR_AD_SLOT_ID_HERE" />
+      <AdComponent slot="5613161938" />
     </main>
   );
 }
