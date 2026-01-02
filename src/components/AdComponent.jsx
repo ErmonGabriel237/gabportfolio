@@ -14,7 +14,7 @@ const AdComponent = ({ slot, style = { display: 'block' }, format = 'auto', resp
       className="adsbygoogle"
       style={style}
       data-ad-client="ca-pub-2053975905096329"  // Replace with your publisher ID
-      data-ad-slot={slot}                     // Your ad unit slot ID from AdSense
+      data-ad-slot={5613161938}                     // Your ad unit slot ID from AdSense
       data-ad-format={format}
       data-full-width-responsive={responsive}
     ></ins>
