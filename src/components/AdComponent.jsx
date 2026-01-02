@@ -17,7 +17,6 @@ const AdComponent = ({ slot, style = { display: 'block' }, format = 'auto', resp
       data-ad-slot={slot}                     // Your ad unit slot ID from AdSense
       data-ad-format={format}
       data-full-width-responsive={responsive}
-      format={auto}
     ></ins>
   );
 };
