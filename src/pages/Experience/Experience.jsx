@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 // React runtime handles JSX; no default React import required
 import { Cpu, Layers } from "lucide-react";
+import AdComponent from "@/components/AdComponent";
 
 const ExperienceCard = ({
   title,
@@ -49,6 +50,7 @@ const ExperienceCard = ({
         <div className="absolute bottom-0 left-0 w-[2px] h-6 bg-purple-500/50" />
       </div>
     </div>
+    <AdComponent slot="YOUR_AD_SLOT_ID_HERE" />
   </div>
 );
 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Send, Phone, MapPin, Mail, MessageCircle } from "lucide-react";
+import AdComponent from "@/components/AdComponent";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -269,6 +270,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
+      <AdComponent slot="YOUR_AD_SLOT_ID_HERE" />
     </main>
   );
 }
