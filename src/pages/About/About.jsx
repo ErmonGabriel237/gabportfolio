@@ -1,5 +1,5 @@
 import HeroImg from "@/assets/images/myPhoto.jpg";
-import AdComponent from "@/components/AdComponent";
+// import AdComponent from "@/components/AdComponent";
 
 export default function About() {
   return (
@@ -52,7 +52,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <AdComponent slot="5613161938" />
+        {/* <AdComponent slot="5613161938" /> */}
       </section>
     </>
   );

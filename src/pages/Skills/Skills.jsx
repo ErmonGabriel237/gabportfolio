@@ -31,7 +31,7 @@ import { TbBrandVscode } from "react-icons/tb";
 import { BsFileEarmarkCode, BsGrid1X2 } from "react-icons/bs";
 import { MdAnimation } from "react-icons/md";
 import { FcWorkflow } from "react-icons/fc";
-import AdComponent from "@/components/AdComponent";
+// import AdComponent from "@/components/AdComponent";
 
 const SkillCard = ({ icon: Icon, title, skills, color }) => (
   <>
@@ -64,7 +64,7 @@ const SkillCard = ({ icon: Icon, title, skills, color }) => (
         </div>
       </CardContent>
     </Card>
-    <AdComponent slot="5613161938" />
+    {/* <AdComponent slot="5613161938" /> */}
   </>
 );
 

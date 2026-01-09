@@ -8,7 +8,7 @@ import SparklesText from "@/components/ui/sparkles-text";
 import { FlipWords } from "@/components/ui/flip-words";
 import { Link } from "react-router-dom";
 import { scrollToId } from "@/lib/scroll";
-import AdComponent from "@/components/AdComponent";
+// import AdComponent from "@/components/AdComponent";
 
 // Grid Background - Replacing the HexagonBackground
 const GridBackground = () => {
@@ -39,7 +39,7 @@ const GridBackground = () => {
           <rect width="100%" height="100%" fill="url(#grid)" />
         </svg>
       </div>
-      <AdComponent slot="5613161938" />
+      {/* <AdComponent slot="5613161938" /> */}
     </div>
   );
 };
@@ -138,7 +138,7 @@ const profile = {
     };
   }, [code]);
 
-  const [activeLink, setActiveLink] = useState(() => {
+  const [, setActiveLink] = useState(() => {
     const path = location.pathname.substring(1) || "home";
     return path;
   });

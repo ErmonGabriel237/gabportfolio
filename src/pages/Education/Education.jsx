@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Code, Calendar, BookOpen } from "lucide-react";
 import { motion } from "framer-motion";
-import AdComponent from "@/components/AdComponent";
+// import AdComponent from "@/components/AdComponent";
 
 const EducationSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -201,7 +201,7 @@ const EducationSection = () => {
           </motion.div>
         </div>
       )}
-      <AdComponent slot="5613161938" />
+      {/* <AdComponent slot="5613161938" /> */}
     </section>
   );
 };
